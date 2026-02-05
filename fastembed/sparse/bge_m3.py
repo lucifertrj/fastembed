@@ -20,7 +20,7 @@ supported_bge_m3_models: list[SparseModelDescription] = [
         ),
         license="mit",
         size_in_GB=2.27,
-        sources=ModelSource(hf="aapot/bge-m3-onnx"),
+        sources=ModelSource(hf="BAAI/bge-m3"),
         model_file="model.onnx",
         additional_files=["onnx/model.onnx_data", "onnx/sentencepiece.bpe.model"],
     ),
