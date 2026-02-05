@@ -11,12 +11,13 @@ from fastembed.sparse.sparse_embedding_base import (
     SparseTextEmbeddingBase,
 )
 from fastembed.sparse.splade_pp import SpladePP
+from fastembed.sparse.bge_m3 import BgeM3
 import warnings
 from fastembed.common.model_description import SparseModelDescription
 
 
 class SparseTextEmbedding(SparseTextEmbeddingBase):
-    EMBEDDINGS_REGISTRY: list[Type[SparseTextEmbeddingBase]] = [SpladePP, Bm42, Bm25, MiniCOIL]
+    EMBEDDINGS_REGISTRY: list[Type[SparseTextEmbeddingBase]] = [SpladePP, Bm42, Bm25, MiniCOIL, BgeM3]
 
     @classmethod
     def list_supported_models(cls) -> list[dict[str, Any]]:
