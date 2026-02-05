@@ -50,8 +50,8 @@ class BgeM3(SparseTextEmbeddingBase, OnnxTextModel[SparseEmbedding]):
                 "Ensure the ONNX model provides sparse output."
             )
 
-        sparse_vecs = output.metadata["sparse_vecs"]  
-        token_weights = sparse_vecs.squeeze(-1) 
+        sparse_vecs = output.metadata["sparse_vecs"]
+        token_weights = sparse_vecs.squeeze(-1) if sparse_vecs.ndim == 3 else sparse_vecs
 
         unused_tokens = set()
         for name in ("cls", "eos", "pad", "unk"):
