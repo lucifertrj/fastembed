@@ -6,7 +6,7 @@ from fastembed.common.model_description import SparseModelDescription, ModelSour
 from fastembed.common.onnx_model import OnnxOutputContext
 from fastembed.common.types import Device
 from fastembed.common.utils import define_cache_dir
-from fastembed.sparse.sparse_embedding_base import SparseEmbedding, SparseTextEmbeddingBase,
+from fastembed.sparse.sparse_embedding_base import SparseEmbedding, SparseTextEmbeddingBase
 from fastembed.text.onnx_text_model import OnnxTextModel, TextEmbeddingWorker
 
 supported_bge_m3_models: list[SparseModelDescription] = [
